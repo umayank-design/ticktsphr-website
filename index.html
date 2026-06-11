@@ -1,82 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ticktsphr™ | Predict. Route. Resolve.</title>
-  <meta name="description" content="Ticktsphr is an AI-powered enterprise support intelligence platform for Oracle, SAP, Salesforce, ServiceNow, Jira and enterprise applications." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Ticktsphr | Autonomous AI Support Platform</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: "#0B0F19",
+            panel: "#111827",
+            border: "#1F2937",
+            silver: "#9CA3AF",
+            violet: "#7C3AED",
+            mint: "#10B981"
+          },
+          fontFamily: {
+            sans: ["Inter", "Plus Jakarta Sans", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            glow: "0 0 60px rgba(124, 58, 237, 0.35)",
+            mintGlow: "0 0 50px rgba(16, 185, 129, 0.25)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(124,58,237,.22), transparent 32%),
+        radial-gradient(circle at top right, rgba(16,185,129,.12), transparent 28%),
+        #0B0F19;
+    }
+    .glass {
+      background: rgba(17, 24, 39, 0.62);
+      backdrop-filter: blur(22px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+  </style>
 </head>
-<body>
-  <header class="nav">
-    <div class="brand">
-      <div class="logo">TS</div>
-      <div><strong>Ticktsphr™</strong><span>Predict. Route. Resolve.</span></div>
-    </div>
-    <nav>
-      <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
-      <a class="btn small" href="https://demo.ticktsphr.com" target="_blank">Launch Demo</a>
+
+<body class="font-sans text-white antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-base/75 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-violet shadow-glow">
+          <span class="text-lg font-black">T</span>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight">Ticktsphr</span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#features" class="text-sm text-silver hover:text-white">Features</a>
+        <a href="#pricing" class="text-sm text-silver hover:text-white">Pricing</a>
+        <a href="#integrations" class="text-sm text-silver hover:text-white">Integrations</a>
+      </div>
+
+      <a href="#demo" class="rounded-full bg-violet px-5 py-2.5 text-sm font-bold text-white shadow-glow transition hover:scale-105 hover:bg-violet/90">
+        Book a Demo
+      </a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <p class="badge">AI-Powered Enterprise Support Intelligence</p>
-      <h1>Predict support issues. Route tickets intelligently. Resolve faster.</h1>
-      <p class="sub">Ticktsphr helps enterprise support teams reduce manual triage, predict root causes, prevent SLA breaches and convert repeated incidents into reusable knowledge.</p>
-      <div class="actions"><a class="btn" href="https://demo.ticktsphr.com" target="_blank">Launch Live Demo</a><a class="btn outline" href="#contact">Request Demo</a></div>
-    </div>
-    <div class="dashboard-card">
-      <div class="card-title">Executive Command Center</div>
-      <div class="kpi-grid">
-        <div><b>94%</b><span>AI Accuracy</span></div><div><b>78%</b><span>Auto Routed</span></div><div><b>97%</b><span>SLA Compliance</span></div><div><b>₹38L</b><span>Savings Potential</span></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden pt-36 pb-24 lg:pt-44">
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-silver">
+            <span class="h-2 w-2 rounded-full bg-mint shadow-mintGlow"></span>
+            AI-native support automation for modern teams
+          </div>
+
+          <h1 class="text-5xl font-black tracking-tight md:text-7xl">
+            Annihilate your support queue with autonomous AI.
+          </h1>
+
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-silver md:text-xl">
+            Ticktsphr connects with your helpdesk, understands incoming tickets, resolves routine issues instantly, and routes complex cases to the right human agent with full context.
+          </p>
+
+          <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="#trial" class="w-full rounded-full bg-violet px-8 py-4 text-center text-sm font-extrabold shadow-glow transition hover:scale-105 sm:w-auto">
+              Start Free Trial
+            </a>
+            <a href="#video" class="w-full rounded-full border border-white/15 bg-white/5 px-8 py-4 text-center text-sm font-extrabold text-white transition hover:bg-white/10 sm:w-auto">
+              Watch 2-Min Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- DASHBOARD PREVIEW -->
+        <div class="relative mx-auto mt-20 max-w-6xl">
+          <div class="absolute -inset-8 rounded-[2rem] bg-violet/20 blur-3xl"></div>
+
+          <div class="glass relative overflow-hidden rounded-[2rem] p-4 shadow-2xl">
+            <div class="rounded-[1.5rem] border border-white/10 bg-base">
+              <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+                <div class="flex gap-2">
+                  <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                  <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+                  <span class="h-3 w-3 rounded-full bg-green-400"></span>
+                </div>
+                <div class="hidden rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs text-silver md:block">
+                  live.ticktsphr.ai/dashboard
+                </div>
+              </div>
+
+              <div class="grid gap-4 p-5 lg:grid-cols-12">
+                <aside class="hidden rounded-2xl border border-white/10 bg-white/[0.03] p-4 lg:col-span-3 lg:block">
+                  <p class="mb-4 text-xs uppercase tracking-widest text-silver">AI Queue</p>
+                  <div class="space-y-3">
+                    <div class="rounded-xl bg-violet/20 p-3 text-sm">Autonomous Resolution</div>
+                    <div class="rounded-xl bg-white/5 p-3 text-sm text-silver">Human Handoff</div>
+                    <div class="rounded-xl bg-white/5 p-3 text-sm text-silver">Knowledge Gaps</div>
+                    <div class="rounded-xl bg-white/5 p-3 text-sm text-silver">SLA Watchtower</div>
+                  </div>
+                </aside>
+
+                <section class="lg:col-span-9">
+                  <div class="grid gap-4 md:grid-cols-3">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p class="text-sm text-silver">Tickets Resolved</p>
+                      <p class="mt-2 text-3xl font-black">72%</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p class="text-sm text-silver">Avg Response</p>
+                      <p class="mt-2 text-3xl font-black">18s</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p class="text-sm text-silver">SLA Risk</p>
+                      <p class="mt-2 text-3xl font-black text-mint">Low</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                    <div class="mb-5 flex items-center justify-between">
+                      <h3 class="font-bold">Real-time AI Resolution Feed</h3>
+                      <span class="rounded-full bg-mint/10 px-3 py-1 text-xs font-bold text-mint">Live</span>
+                    </div>
+
+                    <div class="space-y-3">
+                      <div class="rounded-xl border border-white/10 bg-base/70 p-4">
+                        <p class="font-semibold">Password reset request</p>
+                        <p class="mt-1 text-sm text-silver">Resolved automatically using verified knowledge article.</p>
+                      </div>
+                      <div class="rounded-xl border border-white/10 bg-base/70 p-4">
+                        <p class="font-semibold">Invoice access issue</p>
+                        <p class="mt-1 text-sm text-silver">Routed to Billing Ops with customer history attached.</p>
+                      </div>
+                      <div class="rounded-xl border border-white/10 bg-base/70 p-4">
+                        <p class="font-semibold">App login failure</p>
+                        <p class="mt-1 text-sm text-silver">AI suggested fix. Awaiting human approval.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="insight">AI identified Procurement, Inventory and Integration as top workload areas.</div>
+    </section>
+    
+    <!-- TRUST BAR -->
+    <section id="integrations" class="border-y border-white/10 bg-white/[0.025] py-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <p class="mb-6 text-center text-sm uppercase tracking-[0.3em] text-silver">
+          Works with your existing stack
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 text-center text-xl font-black text-white/45 md:grid-cols-4">
+          <div>Slack</div>
+          <div>Zendesk</div>
+          <div>Intercom</div>
+          <div>Jira</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE PILLARS -->
+    <section id="features" class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-mint">Why Ticktsphr</p>
+          <h2 class="text-4xl font-black tracking-tight md:text-5xl">
+            Built for support teams that need speed without chaos.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-silver">
+            Automate the repetitive noise, keep humans in control, and make every ticket smarter than the last one.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-2 hover:border-violet/60 hover:bg-white/[0.06]">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet/20 text-2xl">
+              ⚡
+            </div>
+            <h3 class="text-2xl font-extrabold">Instant Resolution</h3>
+            <p class="mt-4 leading-7 text-silver">
+              Deflect routine issues in seconds with AI answers grounded in your knowledge base, policies, and past resolutions.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-2 hover:border-mint/60 hover:bg-white/[0.06]">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-mint/20 text-2xl">
+              🤝
+            </div>
+            <h3 class="text-2xl font-extrabold">Human-in-the-Loop</h3>
+            <p class="mt-4 leading-7 text-silver">
+              Complex tickets move to agents with summaries, priority, probable root cause, customer history, and next-best action.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-2 hover:border-violet/60 hover:bg-white/[0.06]">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet/20 text-2xl">
+              🧠
+            </div>
+            <h3 class="text-2xl font-extrabold">Continuous Learning</h3>
+            <p class="mt-4 leading-7 text-silver">
+              Every resolution strengthens your knowledge layer, improves future routing, and exposes gaps before they hit SLA.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING PLACEHOLDER -->
+    <section id="pricing" class="py-10">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="glass rounded-[2rem] p-8 md:p-12">
+          <div class="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.25em] text-violet">Enterprise-ready</p>
+              <h2 class="mt-4 text-3xl font-black md:text-4xl">Flexible pricing for growing support teams.</h2>
+              <p class="mt-4 text-silver">
+                Start with AI triage. Scale into autonomous resolution, SLA intelligence, knowledge automation, and agent copilots.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-base/60 p-6">
+              <div class="flex items-center justify-between">
+                <span class="text-silver">Typical automation target</span>
+                <span class="text-3xl font-black text-mint">70%</span>
+              </div>
+              <div class="mt-5 h-3 rounded-full bg-white/10">
+                <div class="h-3 w-[70%] rounded-full bg-mint"></div>
+              </div>
+              <p class="mt-4 text-sm text-silver">
+                Reduce ticket volume, protect SLA, and free agents for work that actually needs judgment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="demo" class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-[2.5rem] border border-violet/40 bg-gradient-to-br from-violet/35 via-white/[0.04] to-mint/20 p-10 shadow-glow md:p-16">
+          <div class="absolute right-0 top-0 h-64 w-64 rounded-full bg-violet/30 blur-3xl"></div>
+
+          <div class="relative max-w-3xl">
+            <h2 class="text-4xl font-black tracking-tight md:text-6xl">
+              Turn your support desk into an autonomous resolution engine.
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-silver">
+              Launch faster support, cleaner handoffs, smarter routing, and measurable AI adoption from day one.
+            </p>
+            <a href="#trial" class="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-black text-base transition hover:scale-105">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-14">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-violet font-black">T</div>
+            <span class="text-xl font-extrabold">Ticktsphr</span>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-silver">
+            AI-native support automation for teams that want fewer queues, faster answers, and sharper agents.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold">Product</h4>
+          <ul class="mt-4 space-y-3 text-sm text-silver">
+            <li><a href="#" class="hover:text-white">Features</a></li>
+            <li><a href="#" class="hover:text-white">Integrations</a></li>
+            <li><a href="#" class="hover:text-white">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold">Company</h4>
+          <ul class="mt-4 space-y-3 text-sm text-silver">
+            <li><a href="#" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold">Security</h4>
+          <div class="mt-4 inline-flex rounded-full border border-mint/30 bg-mint/10 px-4 py-2 text-sm font-bold text-mint">
+            SOC2 / GDPR Compliant
+          </div>
+          <p class="mt-4 text-sm text-silver">
+            <a href="#" class="hover:text-white">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-white/10 pt-6 text-sm text-silver">
+        © 2026 Ticktsphr. All rights reserved.
+      </div>
     </div>
-  </section>
+  </footer>
 
-  <section class="platforms">
-    <span>Oracle Fusion</span><span>Oracle EBS</span><span>SAP</span><span>Salesforce</span><span>ServiceNow</span><span>Jira</span><span>Microsoft Dynamics</span>
-  </section>
-
-  <section id="product" class="section">
-    <h2>One intelligence layer for enterprise support</h2>
-    <p class="section-sub">Built for AMS teams, CIO offices, shared service centers and enterprise application support organizations.</p>
-    <div class="features">
-      <div class="feature"><h3>AI Learning Engine</h3><p>Learns from historical tickets, closure comments and analyst feedback.</p></div>
-      <div class="feature"><h3>Resolution Intelligence</h3><p>Predicts root cause and recommends proven resolution steps.</p></div>
-      <div class="feature"><h3>SME Recommendation</h3><p>Finds the right expert based on similar historical issues.</p></div>
-      <div class="feature"><h3>Predictive Operations</h3><p>Forecasts SLA breaches, workload spikes and capacity risks.</p></div>
-      <div class="feature"><h3>Knowledge Generator</h3><p>Converts repeated issues into knowledge articles, SOPs and runbooks.</p></div>
-      <div class="feature"><h3>AI Copilot</h3><p>Conversational assistant for support managers and analysts.</p></div>
-    </div>
-  </section>
-
-  <section id="solutions" class="section split">
-    <div><h2>Designed for Oracle, SAP and Salesforce support</h2><p>Ticktsphr can support enterprise application teams across Procurement, Inventory, Costing, Finance, Order Management, HCM, SAP MM/FI/SD and Salesforce Service Cloud.</p></div>
-    <div class="solution-list"><div>✓ Oracle Fusion Support Intelligence</div><div>✓ SAP Ticket Intelligence</div><div>✓ Salesforce Case Intelligence</div><div>✓ ServiceNow / Jira Connector Roadmap</div><div>✓ Multi-Tenant SaaS Architecture</div></div>
-  </section>
-
-  <section class="impact">
-    <div><b>60%</b><span>Faster Resolution</span></div><div><b>40%</b><span>Lower Support Cost</span></div><div><b>95%</b><span>Classification Accuracy</span></div><div><b>30%</b><span>Fewer Repeat Incidents</span></div>
-  </section>
-
-  <section id="pricing" class="section">
-    <h2>Simple pricing for early adopters</h2>
-    <div class="pricing">
-      <div class="price-card"><h3>Starter</h3><p class="price">₹49,999<span>/month</span></p><p>For small support teams validating AI ticket intelligence.</p></div>
-      <div class="price-card featured"><h3>Professional</h3><p class="price">₹1,49,999<span>/month</span></p><p>For AMS teams needing predictive operations and knowledge automation.</p></div>
-      <div class="price-card"><h3>Enterprise</h3><p class="price">Custom</p><p>For large enterprises, GCCs and multi-application support operations.</p></div>
-    </div>
-  </section>
-
-  <section id="contact" class="cta">
-    <h2>Ready to transform enterprise support?</h2>
-    <p>Book a live demo of Ticktsphr Enterprise and see how AI can predict, route and resolve support issues faster.</p>
-    <a class="btn" href="https://demo.ticktsphr.com" target="_blank">Launch Demo</a>
-    <a class="btn outline" href="mailto:sales@ticktsphr.com">Contact Sales</a>
-  </section>
-
-  <footer><div>© 2026 Ticktsphr™. All rights reserved.</div><div>Predict. Route. Resolve.</div></footer>
 </body>
 </html>
